@@ -1,0 +1,178 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #101010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    flex-wrap: no-wrap;
+}
+
+#fakeflix {
+    font-family: 'Gotham', Times;
+    display: flex;
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+body {
+    background: var(--preto);
+    color: #aaa;
+}
+
+header .mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .logo {
+    margin-top: 0.3em;
+    color: var(--vermelho);
+    font-family: 'Gotham', Times;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    letter-spacing: -0.1em;
+}
+
+header nav {
+    margin-left: 1.5em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ccc;
+    margin-right: 0.4em;
+    font-size: 1.2em;
+    padding: 0.1em;
+}
+
+header nav a:hover {
+    color: #999;
+    transition: 450ms;
+}
+
+#secondaryNav {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -3.1em;
+    margin-bottom: 1.4em;
+}
+
+#secondaryNav div {
+    display: flex;
+    font-size: 1em;
+    margin-right: 2em;
+}
+
+#secondaryNav div a:hover, #secondaryNav div button:hover {
+    cursor: pointer;
+    color: #999;
+    transition: 450ms;
+}
+
+#secondaryNav a, #secondaryNav button {
+    margin-right: 1.5em;
+    background: none;
+    border: none;
+    color: #ccc;
+}
+
+.top {
+    font-size: 1em;
+    background: linear-gradient(rgba(14,14,14,0.1),rgba(14,14,14,0.7)100%), url('/Fakeflix/assets/img/capa-breaking-bad3.jpg');
+        height: 50em;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top .description {
+    margin-bottom: 0.8em;
+    font-size: 1.4em;
+    padding: 2.5em 0;
+}
+
+.title {
+    font-size: 3.5em;
+    margin-top: 5.3em;
+}
+
+.button {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba(100,100,100,0.3);
+    border: none;
+    color: #aaa;
+    padding: 1.1em 2.2em;
+    border-radius: 0.2em;
+    margin-right: 0.6em;
+    cursor: pointer;
+}
+
+.button#play {
+    background-color: #aaa;
+    color: #141414;
+}
+
+.button#play:hover {
+    background-color: rgba(100,100,100,0.8);
+    color: #141414;
+}
+
+.button:hover {
+    background-color: rgba(20,20,20,0.8);
+    transition: 350ms ease all;
+}
+
+.fa-solid {
+    margin-right: 0.4em;
+}
+
+.mainContainer {
+    margin-left: 1.5em;
+}
+
+.top .mainContainer {
+    width: 50%;
+}
+
+.movieBox {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.movieCarousel {
+    margin: 0.5em;
+}
+
+.movieCarousel div .item:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 350ms ease all;
+}
+
+/* --- RESPONSE --- */
+
+@media screen and (max-width: 700px) {
+    header .mainContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        margin-top: 0.5em;
+        width: 16em;
+        height: 4em;
+    }
+}
